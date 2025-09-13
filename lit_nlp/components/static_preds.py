@@ -1,4 +1,10 @@
-# Copyright 2020 Google LLC
+datasets = {
+      'foo_data': FooDataset('/path/to/foo.tsv'),
+      'bar_data': BarDataset('/path/to/bar.tfrecord'),
+  }
+  models = {'my_model': MyModel('/path/to/model/files')}
+  lit_demo = lit_nlp.dev_server.Server(models, datasets, port=4321)
+  lit_demo.serve() Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
